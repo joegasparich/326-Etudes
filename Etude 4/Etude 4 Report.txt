@@ -1,0 +1,76 @@
+Joe Gasparich - 2373980
+Mutaz Helal - 6273866
+Tommy Chen - 5277929
+
+Task 1:
+The vehicle can safely travel 360 km without refueling.
+Assuming dropping fuel and topping up counts as refuelling, we have 60L of fuel which translates to 720km
+In order to safely return, we can only go half as far, so 360km
+
+Task 2:
+We solved this task by simply dumping fuel in 360km increments until we had enough fuel to get to the end
+
+Top Up 60 Carry 80 Go Forward 360 D80 Go Back 360
+Top Up 60 Carry 80 Go Forward 360 D80 Go Back 360
+Top Up 60 Carry 80 Go Forward 360 Top Up 30 Go Forward 360 D80 Go Back 360 Top Up 30 Go Back 360 
+Top Up 60 Carry 80 Go Forward 360 Top Up 30 Go Forward 360 Top Up 30 Go Forward 360 D80 Top Up 30 Go Back 720 Top Up 30 Go Back 360
+Top Up 60 Carry 80 Go Forward 360 Top Up 30 Go Forward 360 Top Up 30 Go Forward 360 Top Up 30 Go Forward 720 D60 Top Up 60 Go Forward 613
+
+Task 3:
+
+We solved this task by dumping an absolutely obscene amount of fuel in the desert with no attention to optimality.
+
+Top up 60 Carry 80 Drive forward 360 Drop fuel 80 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Drop fuel 80 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Drop fuel 80 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Drop fuel 80 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Drop fuel 80 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Drop fuel 80 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Drop fuel 80 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Drop fuel 80 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Drop fuel 80 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Drop fuel 80 Drive Back 360 Top up30 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Drop fuel 80 Drive Back 360 Top up30 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Drop fuel 80 Drive Back 360 Top up30 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Drop fuel 80 Drive Back 360 Top up30 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Drop fuel 80 Drive Back 360 Top up30 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Drop fuel 80 Drive Back 360 Top up30 Drive Back 360 Top up30 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Drop fuel 80 Drive Back 360 Top up30 Drive Back 360 Top up30 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Drop fuel 80 Drive Back 360 Top up30 Drive Back 360 Top up30 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Drop fuel 80 Drive Back 360 Top up30 Drive Back 360 Top up 30 Drive Back 360 Top up 30 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Drop fuel 80 Drive Back 360 Top up30 Drive Back 360 Top up 30 Drive Back 360 Top up 30 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Drop fuel 80 Drive Back 360 Top up30 Drive Back 360 Top up 30 Drive Back 360 Top up 30 Drive Back 360 Top up 30 Drive Back 360
+Top up 60 Carry 80 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 360 Top up 30 Drive forward 613 Drop fuel 40 Top up 40 Drive Back 613 Top up 50 Drive Back 360 Top up 30 Drive Back 360 Top up 30 Drive Back 360 Drop fuel 20 Top up 30 Drive Back 360 Top up 30 Drive Back 360
+
+
+Task 4:
+Using N.J.Fine’s method to maximize the distance the vehicle can travel with given quantity of fuel,
+We take 140 litres (max amount of fuel the vehicle can hold) as our base unit for fuel, we minimize the distance of the first trip by maximizing the second. 
+The farthest fuel dump contains 1/3 of a unit of fuel (46.667 litres), with only 173 km left, the fuel dump next to the base only need to have 14.417 litres of fuel. 
+Which is why this method is well optimized
+
+Top up 28.833 Carry 43.251 Drive forward 173 Drop fuel 43.251 Drive Back 173
+Top up 60 Carry 80 Drive forward 173 Top up 14.417 Drive forward 560 Drop fuel 80 Top up 33.333 Drive Back 560 Top up 14.417 Drive Back 173
+Top up 60 Carry 80 Drive forward 173 Top up 14.417 Drive forward 560 Top up 46.667 Drive forward 720 Drop fuel 60 Top up 60 Drive forward 720 Drop fuel 20 Top up 20 Drive forward 240
+
+
+Task 5:
+We started by working backwards, figuring out the optimal trip assuming 360 length gaps between the main fuel deposits.
+We then calculated the absolute minimum fuel needed in the desert for the last two trips.
+This amounted to (120, 120, 120, 60) at locations (360, 720, 1080, 1440).
+Once we had this, all that was left was to figure out the fastest way to get that amount of fuel into the desert.
+
+Top Up 40 Carry 80 Go Forward 240 Drop Fuel 80 Go Back 240
+Top Up 40 Carry 80 Go Forward 240 Drop Fuel 80 Go Back 240
+Top Up 40 Carry 80 Go Forward 240 Drop Fuel 80 Go Back 240
+Top Up 40 Carry 40 Go Forward 240 Drop Fuel 40 Go Back 240
+Top Up 60 Carry 80 Go Forward 240 Drop Fuel 60 Top Up 20 Go Forward 240 Drop Fuel 20 Go Back 480
+Top Up 60 Carry 80 Go Forward 240 Top Up 20 Go Forward 240 Drop Fuel 80 Go Back 480
+Top Up 60 Carry 80 Go Forward 240 Top Up 20 Go Forward 240 Drop Fuel 80 Go Back 480
+Top Up 60 Carry 80 Go Forward 240 Top Up 20 Go Forward 240 Drop Fuel 60 Top Up 20 Go Forward 240 Drop Fuel 20 Go Back 480 Top Up 20 Go Back 240
+Top Up 60 Carry 80 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Drop Fuel 80 Go Back 480 Top Up 20 Go Back 240
+Top Up 60 Carry 80 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Drop Fuel 60 Top Up 20 Go Forward 240 Drop Fuel 20 Go Back 480 Top Up 20 Go Back 240 Top Up 20 Go Back 240 
+Top Up 60 Carry 80 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Drop Fuel 80 Go Back 480 Top Up 20 Go Back 240 Top Up 20 Go Back 240
+Top Up 60 Carry 80 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Drop Fuel 80 Go Back 480 Top Up 20 Go Back 240 Top Up 20 Go Back 240 Top Up 20 Go Back 240
+Top Up 60 Carry 64.3335 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Drop Fuel 40 Go Forward 133 Drop Fuel 24.3335 Top Up 2.167 Go Back 133 Go Back 240 Top Up 20 Go Back 240 Top Up 20 Go Back 240 Top Up 20 Go Back 240 Top Up 20 Go Back 240 Top Up 20 Go Back 240 
+Top Up 60 Carry 80 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 240 Top Up 20 Go Forward 133 Top Up 11.08333 Go Forward 720 Drop Fuel 60 Top Up 60 Go Forward 120 Go Back 120 Drop Fuel 20 Top Up 20 Go Back 720 Top Up 11.08333 Go Back 133 Top Up 20 Go Back 240 Top Up 20 Go Back 240 Top Up 20 Go Back 240 Top Up 20 Go Back 240 Top Up 20 Go Back 240 Top Up 20 Go Back 240

@@ -1,0 +1,86 @@
+ETUDE 12
+
+Joe Gasparich - 2373980
+
+MARKS
+
+Alan aggregate 24
+Charles same 4/5
+Ellen 1st in M, 3rd in S
+Aggregates descend alphabetically, no duplicate aggregates
+
+	A	B	C	D	E	T
+E	5	4	3	2	1	15
+H	5	4	3	2	1	15
+F	5	4	3	2	1	15
+M	4	1	3	2	5	15
+S	5	2	1	4	3	15
+T	24	15	13	12	11	75
+
+Remaining:
+5	0
+4	0
+3	0
+2	0
+1	0
+
+Alan had 24 points, meaning he came first in 4 subjects and second in 1. Since Ellen came first in Maths, Alan must have come second in Maths
+If Charles had four 4s then there wouldn't be enough points for Barbara to come second
+Similarly, if Charles got four 2s then he wouldn't have enough points to come third since Ellen got 8 with only 2 subjects, therefore must have gotten four 3s (not in Science due to Ellen)
+Charles got 13, 14 or 16 aggregate
+With no 3s remaining, Barbara has to have at least three 4s in order to beat Charles (can't be in Maths)
+The remaining 4 can't be given to Charles or Barbara wouldn't be able to beat him, and can't be given to Ellen or she wouldn't be last, therefore must be David
+Barbara could have gotten a 4 in English, History, French or Science but I'm going to assume its English, History and French since it doesn't affect the answer
+Ellen has a minimum of 11 points, which David needs 8 points to beat, meaning he has to have four 2s in his remaining subjects
+Ellen therefore had to have less than 12 points, giving her three 1s in his remaining subjects
+Charles needs to beat 12 with a 1 or a 2, giving him 13 or 14. If he got a 14, then Barbara would also get a 14 with the remaining 1s
+Therefore, Charles gets 1 in Science and Barbara gets 1 in Maths, 2 in Science, filling out the table
+
+1. 	Barbara got a mark of 1 in mathematics
+	Alan, Charles and David got the same mark in four papers
+
+SOCCER
+
+Win = 2
+Draw = 1
+Loss = 0
+
+	Played	Won		Lost	Drawn 	G for	G ag	Points
+A	3		2		1		0		2		1		4
+B	1		0		0		1		0		0		1
+C	3		3		0		0		5		0		6
+D	3		0		1		2		0		4		1
+E	4		0		2		2		0		2		2
+
+E has played against all 4 other teams
+B has only played against E
+C has played maximum of 3 games since it can't have faced B, meaning it must have won 3 in order to get its 6 points
+C has played against A, D and E
+A has played a maximum of 3 games, and it lost one to C, meaning it had to win its other 2 in order to get 4 points
+A has played against C, D and E
+E's losses therefore must have been to A and C meaning B's 1 game was a draw
+D's game to E was a draw, D's game to C was a loss and it's game to A was a loss
+
+Game Breakdown
+
+X scored against Y
+
+	A	B	C	D	E	GF
+A	X	X	0	1	1	2
+B	X	X	X	X	0	0
+C	1	X	X	3	1	5
+D	0	X	0	X	0	0
+E	0	0	0	0	X	0
+GA	1	0	0	4	2
+
+In order to lose, E must have taken at least 1 goal in each loss, meaning each of it's draws were 0:0
+Therefore B's one game was 0:0 and D's game to E was 0:0, A and C's game to E was 1:0
+A must have been scored against to lose its loss, therefore it lost 0:1 to C
+C scored 5 goals, and it got 2 of them in 2 of its games, therefore it must have scored 3 against D
+D took 4 goals, 3 of them were to C and 0 of them were to E, therefore it took 1 goal from A
+C was not scored against, therefore it took 0 goals in all its games
+A took 1 goal which was from C, therefore it took none against D
+D therefore scored no goals against anyone
+A therefore scored 1 against D and E, giving it 2 goals scored, filling out the table
+
+2.	C has played team D, the score was 3:0 to team C
