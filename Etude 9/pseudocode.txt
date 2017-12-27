@@ -1,0 +1,49 @@
+//Data Structures
+Queue of nodes
+Hashmap of nodes //Has state as key
+numStates = 0
+
+emptyState = grid[min(4, length)][width] //Fill grid with empty
+emptyNode = new Node (state, 0) //The empty grid node, is the solution node
+
+Add emptyNode to the queue //The starting node of the graph
+Add emptyNode to the hashmap //Use the state as the key
+
+//--Section One--//
+// Essentially creates a graph of all possible states and their connections to one another
+// This continues to loop through the queue until there are no more undiscovered states
+// Each state is added to a graph as a node, connected to other nodes
+
+while queue isn't empty
+	currentNode = first node off of queue
+	for each possible piece permutation
+		newState = placePiece() //Places the piece, returns null if invalid (i.e. out of bounds, or cells already taken), slide the grid in here
+		if newState is valid
+			if state already exists in hashmap //State has already been found so don't readd it to the queue
+				newNode = hashmap.get(key) //Key is generated from newState
+				add newNode as a neighbour to currentNode
+			else //state hasn't already been found so add it to the queue
+				numStates++
+				newNode = new Node(newState, numStates)
+				add newNode to queue
+				add newState to hashmap
+				add newNode as neighbour to currentNode
+
+
+//--Section Two--//
+// Loops through the amount of pieces to place, using the graph to figure out the total amount of ways to get to a given state
+// Does this by creating a table that stores these values per piece placed
+
+totalPiecesToPlace = (width*length)/4
+table = new grid[numStates+1][totalPiecesToPlace+1] //Set all values to 0
+stateArray = Create an array of the nodes of each state
+
+table[0][0] = 1 //Empty state is only one state when piecesPlaced is at 0
+
+For each row //Each row represents a piece being placed
+	For each state //Each state when this piece is being placed
+		currentNode = stateArray[state]
+		For each neighbour of currentNode
+			Add this node's value to the neighbours cell in the next row //This will add all the ways to get to a given state to its neighbour
+
+return value in [0][totalPiecesToPlace+1] //This will return the number of possible ways to get to the empty state at the final piece placed(i.e. filled)
